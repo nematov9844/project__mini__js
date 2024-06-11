@@ -1,0 +1,198 @@
+@keyframes spin {
+  0% {
+    transform: translate(0px), rotate(0);
+  }
+  100% {
+    transform: translate(40px), rotate(360deg);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+body {
+  background-color: gray;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: greenyellow;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: blueviolet;
+  gap: 10px;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  position: relative;
+  width: 240px;
+}
+
+li {
+  width: 60px;
+  height: 25px;
+}
+
+.active {
+  position: relative;
+}
+.active::after {
+  transition: all 0.3s;
+  position: absolute;
+  content: "";
+  left: -100%;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  padding-left: 10px;
+  opacity: 0;
+  background-color: red;
+}
+.active:active::after {
+  width: 80%;
+  left: 10%;
+  height: 2px;
+  padding-left: 0;
+  opacity: 1;
+  background-color: wheat;
+  border-radius: 0%;
+  box-shadow: none;
+}
+
+.active2 {
+  position: relative;
+}
+.active2::after {
+  transition: all 0.4s;
+  position: absolute;
+  content: "";
+  left: -200%;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  padding-left: 10px;
+  opacity: 0;
+}
+.active2:active::after {
+  width: 80%;
+  left: 10%;
+  height: 2px;
+  padding-left: 0;
+  opacity: 1;
+  background-color: wheat;
+  border-radius: 0%;
+  box-shadow: none;
+}
+
+.active3 {
+  position: relative;
+}
+.active3::after {
+  transition: all 0.5s;
+  position: absolute;
+  content: "";
+  left: -300%;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: yellowgreen;
+  opacity: 0;
+  padding-right: 30px;
+  border-top-left-radius: 500%;
+  border-bottom-left-radius: 500%;
+  box-shadow: -2px 0px 3px 2px yellowgreen;
+}
+.active3:active::after {
+  width: 10px;
+  left: 10%;
+  height: 2px;
+  padding-left: 0;
+  opacity: 1;
+  background-color: wheat;
+  border-radius: 0%;
+  box-shadow: none;
+}
+
+.active4 {
+  position: relative;
+}
+.active4::after {
+  transition: all 0.6s;
+  position: absolute;
+  content: "";
+  left: -400%;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: yellowgreen;
+  opacity: 0;
+  padding-right: 20px;
+  border-top-left-radius: 500%;
+  border-bottom-left-radius: 500%;
+  box-shadow: -2px 0px 3px 2px yellowgreen;
+}
+.active4:active::after {
+  width: 10px;
+  left: 20%;
+  height: 2px;
+  padding-left: 0;
+  opacity: 1;
+  background-color: wheat;
+  border-radius: 0%;
+  box-shadow: none;
+}
+
+section {
+  width: 100%;
+  height: 80vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+section .list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border: 2.5px solid white;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.6s;
+}
+section .list-item:hover {
+  animation: spin 3s infinite alternate;
+  transform: rotate(-45deg) scale(0.8);
+  border-color: rebeccapurple;
+  border-width: 4px;
+  box-shadow: -5px 5px 7px 0px orange, -10px 10px 7px 0px rgb(0, 0, 0), -15px 15px 7px 0px rgb(255, 166, 0), -20px 20px 7px 0px rgb(0, 0, 0), -25px 25px 7px 0px rgb(255, 166, 0), -30px 30px 7px 0px rgb(0, 0, 0), -35px 5px 7px 0px inset rgba(255, 166, 0, 0.3), -40px 10px 7px 0px inset rgb(0, 0, 0), -45px 15px 7px 0px inset rgba(255, 166, 0, 0.3), -50px 20px 7px 0px inset rgb(0, 0, 0), -55px 25px 7px 0px inset rgba(255, 166, 0, 0.3), -60px 30px 7px 0px inset rgb(0, 0, 0);
+}
+section .list-item:hover i {
+  color: rgb(255, 0, 0);
+}
+section .list-item i {
+  color: white;
+  font-size: 50px;
+}
